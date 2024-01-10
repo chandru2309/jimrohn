@@ -9,14 +9,14 @@ class DisplayText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
 child: Container(
-height: 200,
+height: 400,
   width: 300,
   decoration: BoxDecoration(
 borderRadius: BorderRadius.circular(15),color: Colors.cyan,
   ),
   child: Center(
     child: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(16.0),
       child: Text(appDataText.text,
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 25,

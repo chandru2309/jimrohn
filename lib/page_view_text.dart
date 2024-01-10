@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:jimrohn/app_displaytext.dart';
+import 'package:jimrohn/display_text.dart';
 import 'package:share_plus/share_plus.dart';
 
+import 'navigation_drawer.dart';
 import 'appdata_text.dart';
 
-class AppPageView extends StatefulWidget {
-  const AppPageView({super.key});
+class PageViewText extends StatefulWidget {
+  const PageViewText({super.key});
 
   @override
-  State<AppPageView> createState() => _AppPageViewState();
+  State<PageViewText> createState() => _PageViewTextState();
 }
 
-class _AppPageViewState extends State<AppPageView> {
+class _PageViewTextState extends State<PageViewText>  {
   var _selectIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Navigate(),
       appBar: AppBar(
         backgroundColor: Colors.cyan,
         title: Text(
@@ -45,7 +47,7 @@ class _AppPageViewState extends State<AppPageView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            height: 500,
+            height:400,
             child: PageView.builder(
                 onPageChanged: (index) {
                   setState(() {

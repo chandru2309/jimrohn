@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:jimrohn/my_profile.dart';
+import 'package:jimrohn/pageview_image.dart';
 
-import 'Splash.dart';
-import 'app_displaytext.dart';
-import 'app_pageview.dart';
+import 'navigation_drawer.dart';
+import 'splash_screen.dart';
+import 'display_text.dart';
+import 'page_view_text.dart';
+import 'company_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Splash(),
+      home:PageViewImage()
     );
   }
 }
