@@ -11,7 +11,7 @@ final AppDataImage appDataImage;
 width: 400,
 margin: EdgeInsets.only(top: 1),
       decoration: BoxDecoration(
-borderRadius: BorderRadius.circular(25),
+borderRadius: BorderRadius.circular(30),
 image:DecorationImage(image: AssetImage(appDataImage.image),
     fit: BoxFit.cover
       ),

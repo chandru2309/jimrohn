@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 4), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>PageViewText()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>PageViewText()));
 });
   }
   @override
@@ -28,13 +28,13 @@ body: Column(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [
 Center(
-child: LoadingAnimationWidget.horizontalRotatingDots(color: Colors.white, size: 50),
+child: LoadingAnimationWidget.threeArchedCircle(color: Colors.white, size: 50),
 ),
 Padding(
   padding: const EdgeInsets.all(30.0),
   child:   Text('Think Positive & Stay Calm',style: TextStyle(
 
-    fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),),
+    fontSize: 25,color: Colors.white),),
 )
   ],
 ),

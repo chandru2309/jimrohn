@@ -12,7 +12,7 @@ child: Container(
 height: 400,
   width: 300,
   decoration: BoxDecoration(
-borderRadius: BorderRadius.circular(15),color: Colors.cyan,
+borderRadius: BorderRadius.circular(15),color: Color(0xFF9DD1DF)
   ),
   child: Center(
     child: Padding(

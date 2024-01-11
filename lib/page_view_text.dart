@@ -20,7 +20,7 @@ class _PageViewTextState extends State<PageViewText>  {
     return Scaffold(
       drawer: Navigate(),
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
+        backgroundColor: Color(0xFF9DD1DF),
         title: Text(
           'Jim Rohn Quotes',
           style: TextStyle(color: Colors.black),
@@ -72,17 +72,20 @@ class _PageViewTextState extends State<PageViewText>  {
                   DisplayText(appDataText: appDataText[index]);
                 }),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                  child: new Text(
-                (_selectIndex + 1).toString() +
-                    '/' +
-                    appDataText.length.toString(),
-                style: TextStyle(color: Colors.black, fontSize: 25),
-              )),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                    child: new Text(
+                  (_selectIndex + 1).toString() +
+                      '/' +
+                      appDataText.length.toString(),
+                  style: TextStyle(color: Colors.black, fontSize: 25),
+                )),
+              ],
+            ),
           )
         ],
       ),

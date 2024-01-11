@@ -26,7 +26,7 @@ var selectindex = 0;
     return Scaffold(
       drawer: Navigate(),
 appBar: AppBar(
-  backgroundColor: Colors.cyan,
+  backgroundColor: Color(0xFF9DD1DF),
   title: Text('Jim Rohn Image'),
   actions: [
     PopupMenuButton(
@@ -52,7 +52,7 @@ children: [
 Padding(
   padding: const EdgeInsets.all(0.1),
   child:   Container(
-  height: 400,
+  height: 350,
   width:600,
     child: PageView.builder(
     onPageChanged: (index){
@@ -61,7 +61,7 @@ Padding(
     print(index);
     });
     },
-        controller: PageController(viewportFraction: 0.6),
+        controller: PageController(viewportFraction: 0.7),
         itemCount: appDataImage.length,
         itemBuilder: (context, index) {
           var scale= selectindex ==index ? 1.0 : 0.7;
@@ -81,14 +81,17 @@ Padding(
 
   ),
 ),
-  Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      ...List.generate(
-          appDataImage.length,
-              (index) => Intagaration(
-              isActive: selectindex == index ? true : false))
-    ],
+  Padding(
+    padding: const EdgeInsets.all(16.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        ...List.generate(
+            appDataImage.length,
+                (index) => Intagaration(
+                isActive: selectindex == index ? true : false))
+      ],
+    ),
   )
 ],
 ),
